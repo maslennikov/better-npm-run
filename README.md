@@ -156,3 +156,12 @@ bnr start-dev --encoding=base64
 ```
 
 See [envdot docs](https://github.com/motdotla/dotenv) for more infomation
+
+### Passing arguments to the command
+
+All arguments coming after `--` will be propagated untouched to the invoked command.
+
+```shell
+# will invoke "command --command-arg1 arg2 -a 3"
+bnr command --path=/custom/env -- --command-arg1 arg2 -a 3
+```
